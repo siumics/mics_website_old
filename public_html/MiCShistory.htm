@@ -1,0 +1,280 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Keith">
+   <meta name="GENERATOR" content="Mozilla/4.78 [en] (Win98; U) [Netscape]">
+   <title>MiCShistory</title>
+   
+<script language="JavaScript">
+<!-- hide script from old browsers
+
+/*[*] SCRIPT: Bouncing Image Script COPYRIGHT: © 1999 Hass
+[*] AUTHOR: Lloyd Hassell EMAIL: lloydhass@hotmail.com
+[*] WWW: http://go.to/hass
+[*] Permission granted to Dynamicdrive.com to feature script in archive
+[*] Modified by Dynamicdrive.com for feature alteration
+[*] For this and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+
+//Configure the below three variables (BallSpeed from 1 to 50, larger is faster)
+var ballWidth = 40;
+var ballHeight = 40;
+var BallSpeed = 8;
+var stopafter=0; //set time in seconds before ball disappears. Use 0 for never
+
+var maxBallSpeed = 50;
+var xMax;
+var yMax;
+var xPos = 0;
+var yPos = 0;
+var xDir = 'right';
+var yDir = 'down';
+var superballRunning = true;
+var tempBallSpeed;
+var currentBallSrc;
+var newXDir;
+var newYDir;
+
+function stopit(){
+clearTimeout(doit)
+if (document.getElementById)
+document.getElementById("superball").style.visibility="hidden"
+else if (document.all)
+document.all("superball").style.visibility = "hidden";
+else
+document.layers["superball"].visibility = "hide";
+}
+
+function initializeBall() {
+if (document.all) {
+xMax = document.body.clientWidth
+yMax = document.body.clientHeight
+document.all("superball").style.visibility = "visible";
+}
+else if (document.layers||document.getElementById) {
+xMax = window.innerWidth-14;
+yMax = window.innerHeight;
+if (document.getElementById)
+document.getElementById("superball").style.visibility="visible"
+else
+document.layers["superball"].visibility = "show";
+}
+setTimeout('moveBall()',400);
+if (stopafter>0)
+setTimeout("stopit()",stopafter*1000)
+}
+
+
+function moveBall() {
+if (superballRunning == true) {
+calculatePosition();
+if (document.all) {
+document.all("superball").style.left = xPos + document.body.scrollLeft;
+document.all("superball").style.top = yPos + document.body.scrollTop;
+}
+else if (document.layers) {
+document.layers["superball"].left = xPos + pageXOffset;
+document.layers["superball"].top = yPos + pageYOffset;
+}
+else if (document.getElementById) {
+document.getElementById("superball").style.left = xPos + pageXOffset;
+document.getElementById("superball").style.top = yPos + pageYOffset;
+}
+doit=setTimeout('moveBall()',30);
+}
+}
+
+function calculatePosition() {
+if (xDir == "right") {
+if (xPos > (xMax - ballWidth - BallSpeed)) { 
+xDir = "left";
+}
+}
+else if (xDir == "left") {
+if (xPos < (0 + BallSpeed)) {
+xDir = "right";
+}
+}
+if (yDir == "down") {
+if (yPos > (yMax - ballHeight - BallSpeed)) {
+yDir = "up";
+}
+}
+else if (yDir == "up") {
+if (yPos < (0 + BallSpeed)) {
+yDir = "down";
+}
+}
+if (xDir == "right") {
+xPos = xPos + BallSpeed;
+}
+else if (xDir == "left") {
+xPos = xPos - BallSpeed;
+}
+else {
+xPos = xPos;
+}
+if (yDir == "down") {
+yPos = yPos + BallSpeed;
+}
+else if (yDir == "up") {
+yPos = yPos - BallSpeed;
+}
+else {
+yPos = yPos;
+}
+}
+
+if (document.all||document.layers||document.getElementById){
+window.onload = initializeBall;
+window.onresize = new Function("window.location.reload()");
+}
+
+// end hiding from old browsers -->
+</script>
+
+<style type="text/css">
+
+#superball {
+position:absolute;
+left:0;
+top:0;
+visibility:hide;
+visibility:hidden;
+width:40;
+height:40;
+}
+
+.style2 {
+				font-family: "Times New Roman", Times, serif;
+}
+
+</style>
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="Images/speck1.jpg">
+<span id="superball"><a href="http://www.dynamicdrive.com"><img name="superballImage" src="Images/superball.gif" height="40" width="40" border="0"></a></span>
+<center><font size=-1>&nbsp;</font><b><font size=+3><br>
+</font></b>
+<p><img SRC="MiCS%208wbg.png" height=239 width=343><p><b><font size=+3>History</font></b>
+<table WIDTH="80%" HEIGHT="100" BORDER bordercolor="#0000FF" COLS=1 >
+<caption>
+<TBODY>
+<br><font color="#0000FF">
+</TBODY>
+</font>
+</center>
+</caption>
+
+<tr>
+<td><center>
+  <font size="3" face="Verdana, Arial, Helvetica, sans-serif">
+  <b><div align="left">
+				<p><font color="#333333" face="Georgia, Times New Roman, Times, serif">&nbsp;&nbsp;&nbsp;&nbsp;</font></b><font color="#333333" face="Georgia, Times New Roman, Times, serif"><span class="style2">&nbsp;MiCS
+          was originally conceived during the summer of 1997.&nbsp;
+  The basic concept was for minority computer science students to learn more
+  about the computer science (CS) program and each other earlier in their
+  academic career.&nbsp; Too often, computer science majors didn't actually
+  get to know their classmates until their Junior/Senior year.&nbsp; By then,
+  many students had already changed majors or missed opportunities of which
+  they were simply unaware.&nbsp; It was decided that more of an effort to
+  reach minority underclassmen and increase interaction among the upperclassmen
+  was needed.&nbsp; Several students believed that forming an organization
+  would provide additional resources and opportunities for minority computer
+  science majors and increase their chances of obtaining a degree in Computer
+  Science.&nbsp;&nbsp; Also an effort would be made to form stronger bonds
+  with other organizations with similar interests/goals.</span></font></p>
+	</div>
+</font>
+<p align="left"><font color="#333333" size="3" class="style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The
+        primary objective of <em>"To improve
+      the enrollment and graduation rate of&nbsp; minorities in Computer Science." </em>was established.&nbsp; It was suggested
+    that the minority CS majors could work with the Minority Engineering Program
+    (MEP) and join the local chapter of the National Society of Black Engineers
+    (NSBE).&nbsp; A meeting was arranged with then-director of MEP, Dr. Eugene
+    Cross, and then-vice president of NSBE, Marc Nunn.&nbsp; It was decided
+    that the CS students would form their own organization, but work closely
+    with NSBE and MEP.&nbsp; A determent factor was that the computer science
+    department at SIUC was not in the college of engineering.&nbsp;&nbsp; Members
+    would not be limited to minority students or CS majors - the objectives
+    would be the defining aspect of MiCS.</font><span class="style2"><font color="#333333">    </font>
+</span>
+</center><p align="left">
+    <font size="3" color="#333333" face="Verdana, Arial, Helvetica, sans-serif">    
+<span class="style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As
+    most of the original CS majors had little or no experience with
+any organizations,</span><font face="Georgia, Times New Roman, Times, serif">
+ 
+  </font><span class="style2">NSBE provided valuable assistance and support as MiCS began to form.&nbsp;
+Several of the original member were international students and MiCS also
+received strong support from then-president of the International Student
+Council (ISC), Mamadou Coulibaby.&nbsp; The tedious work of forming a constitution,
+an executive board, and a faculty advisor began.</span><font face="Georgia, Times New Roman, Times, serif"><span class="style2">
+</span>
+  </font></font><font color="#333333" size="3" face="Georgia, Times New Roman, Times, serif">
+<span class="style2">Members
+  present at the first meeting were:&nbsp; Keith Alcox, Katisa
+Brown, Rufus Leggin, Patrick Mburu, Valerie Powe, Als Thompson, and Robert
+Wigfall.&nbsp; By the end of the summer, then-chairperson of the computer
+science department, Dr. Medhi Zargham, agreed to become MiCS faculty advisor.&nbsp; The
+founding executive committee was as follows: </span>
+  </font>
+<p align="left"><font color="#333333" size="3" face="Verdana, Arial, Helvetica, sans-serif">
+<span class="style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Keith Alcox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; President
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Robert Wigfall&nbsp;&nbsp;&nbsp; Vice President
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Katisa Brown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Treasurer
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Rehka Sharma&nbsp;&nbsp;&nbsp; Technical Officer
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Monica Cooper&nbsp;&nbsp; Secretary </span>
+</font>
+<p align="left"><font color="#333333" size="3" face="Verdana, Arial, Helvetica, sans-serif">
+<font class="style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provided
+        with the outstanding example and support of SIUC's local chapter of NSBE
+        and
+        the direct support
+        of then-president,
+        Terrance Lyles,
+  MiCS membership grew to 20+ within the first year.&nbsp; Meetings were
+  held every two weeks, tutoring session were begun, HTML classes were arranged,
+  resume workshops were provided by University Career Services, and students
+  began to learn more about different opportunities and cultures.&nbsp;</font><font face="Georgia, Times New Roman, Times, serif">      </font>
+<span class="style2">MiCS
+  also gained its 1st alumni at the end of the summer, Als Thompson.&nbsp;
+  Although Als graduated and returned to Jamaica just as MiCS was beginning,
+  he was a driving force behind the effort to form an organization.&nbsp; Als
+  and the growing list of alumni all continue to support MiCS and its members
+  as inspirational
+  examples who remain true to MiCS objectives and
+  goals.&nbsp;</span></font><font color="#333333" face="Georgia, Times New Roman, Times, serif">
+  </font>
+<p>&nbsp; </td>
+</tr>
+
+<tr>
+<td>
+<center>
+  <font color="#0000FF"><b><u>MiCS would like to thank the following organization
+  for their
+support!&nbsp;</u></b>
+  <p><a href="http://www.siu.edu/~isc"><img SRC="isc.jpg" BORDER=0 height=60 width=250></a><a href="http://www.siu.edu/~nsbe"><img SRC="nsbe.gif" height=100 width=94></a><a href="http://www.siu.edu/~shpe"><img SRC="shpe-logo12.jpg" BORDER=0 height=203 width=206></a>  
+  </font>
+</center>
+</td>
+</tr>
+</table>
+</center>
+
+<p><br>
+
+
+</body>
+</html>

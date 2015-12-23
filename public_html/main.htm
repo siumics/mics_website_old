@@ -1,0 +1,129 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+   <meta name="Author" content="default">
+   <title>Minorities In Computer Science MiCS</title>
+<script language="JavaScript1.2">
+//=====================================================
+
+ var img0 = new Image( 216, 112 )
+ img0.src = "micslogo.gif"
+
+ var img1 = new Image( 216, 112 )
+ img1.src = "logo01.jpg"
+
+ var img2 = new Image( 216, 112 )
+ img2.src = "logo02.jpg"
+
+var img3 = new Image( 216, 112 )
+ img3.src = "MiCSNewLogoWhite.png"
+
+var img4 = new Image( 216, 112 )
+ img4.src = "logo04.jpg"
+
+var img5 = new Image( 216, 112 )
+ img5.src = "logo05.jpg"
+
+ var j = 0
+ var nbImg = 6 // change to the number of different images you have
+ function animate() {
+   document.images[0].src = eval("img" + j ).src
+   j++
+   if (j == nbImg) j=0 
+   junk = setTimeout("animate()", 750) // in milliseconds
+   }
+
+
+//-->
+   </script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000099" vlink="#551A8B" alink="#000099">
+<center>
+  <img src="MiCSNewLogoWhite.png" width=450" height="300">
+</center>
+<!-<img SRC="micslogo.gif" BORDER=0 height=234 width=352---><br>
+
+<!-----------------------Scroller Script---------------------------------------->
+<script language="JavaScript1.2">
+//Specify the marquee's width (in pixels)
+var marqueewidth=900
+//Specify the marquee's height (in pixels, pertains only to NS)
+var marqueeheight=20
+//Specify the marquee's scroll speed (larger is faster)
+var speed=4
+//Specify the marquee contents
+var marqueecontents='<font face="Arial"><font color="blue"><strong><big> Dreamweaver Workshop this weekend!  See Events page for detail...</big></strong></font></font>'
+
+if (document.all)
+document.write('<marquee scrollAmount='+speed+' style="width:'+marqueewidth+'">'+marqueecontents+'</marquee>')
+
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+if (document.layers){
+setTimeout("window.onresize=regenerate",450)
+intializemarquee()
+}
+}
+
+function intializemarquee(){
+document.cmarquee01.document.cmarquee02.document.write('<nobr>'+marqueecontents+'</nobr>')
+document.cmarquee01.document.cmarquee02.document.close()
+thelength=document.cmarquee01.document.cmarquee02.document.width
+scrollit()
+}
+
+function scrollit(){
+if (document.cmarquee01.document.cmarquee02.left>=thelength*(-1)){
+document.cmarquee01.document.cmarquee02.left-=speed
+setTimeout("scrollit()",100)
+}
+else{
+document.cmarquee01.document.cmarquee02.left=marqueewidth
+scrollit()
+}
+}
+
+window.onload=regenerate2
+</script>
+
+
+<p>
+
+<table border=0 width="85%" align=center>
+<tr><td>
+
+<!-------------------------------Scroller Layer---------------------------------------->
+
+<center><ilayer width=&{marqueewidth}; height=&{marqueeheight}; name="cmarquee01">
+<layer name="cmarquee02"></layer>
+</ilayer></center><br>
+      <!------------------------------------------------------------------------------------->
+      <font face="Arial,Helvetica"><font color="#000000"><b>Minorities in Computer 
+      Science (MiCS) </b>is a student's voice in the department of<b></b> Computer 
+      Science.&nbsp; The main objective of <b>MiCS</b> is to increase the enrollment 
+      and graduation rate of minorities in Computer Science.&nbsp;&nbsp; Currently, 
+      it consists of six executive board members, a faculty advisor, and a wide 
+      range of students from the computer science department and other majors.&nbsp;<b>MiCS</b> 
+      , pronounced "MIX", was formed to provide an exchange of knowledge, backgrounds, 
+      and experience for students interested in Computer Science.&nbsp;Meetings 
+      are held at least once a month throughout the fall and spring semesters.&nbsp;<i>All 
+      students with a sincere interest in Computer Science are welcome to attend.</i> 
+      <b>MiCS</b> requires few guidelines to become a member.</font></font> <font face="Arial,Helvetica"><font color="#000000"></font></font> 
+      <p><b><font face="Arial,Helvetica"> <font color="#000000"><a href="const.htm">Constitution Page</a>. </font></font></b></p>
+      <p><strong><font color="#000000" face="Arial,Helvetica"><a href="MiCShistory.htm">MiCS History </a></p>
+      <p><a href="LogoChoices.htm">Logos Viewing page</a>.</p>
+      </font></strong></i></td></tr>
+</table>
+
+<p><center><font color="#000000">Faculty Advisor:</font><br>
+    <font color="#000000"><a href="http://www.cs.siu.edu/faculty/namdar/index.html" target="_blank">Dr. Namdar
+    Mogharreban </a></font><br>
+    <font color="#000000">Computer Science Department</font></center>
+<a href="http://www.dataplain.com"><script language="javascript" src="http://www.dataplain.com/cgi/js.cgi?mics"></script></a>
+  	
+</body>
+</html>

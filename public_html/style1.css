@@ -1,0 +1,85 @@
+/* CSS Document */
+
+a:link {color:#993399}
+a:visited {color:#0066CC}
+a:hover {color:#00CCFF}
+
+body{ text-align:center;
+}
+
+#container
+{
+   width:800px;
+   border:0px solid blue;
+         margin-left:auto;
+	  margin-right:auto;
+
+}
+
+
+#content
+{
+    width:700px;
+	border:2px solid black;
+	margin-left:50px;
+	text-align:center;
+}
+
+#Html_class
+{
+}
+
+
+#Event_title
+{
+
+   font-size:24px;
+   color:#000099;
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   font-weight:bold;
+}
+
+#Event_title img
+{
+   border:2px double blue;
+
+}
+  
+
+#m_title, #m_type, #m_date, #m_location, #m_time, #m_sentence
+{
+   display:block;
+      
+}
+
+#m_title, #m2_title
+{
+   font-size:24px;
+   font-weight:bold;
+   color:#0000CC;
+}   
+
+#m2_title, #m_time
+{
+font-style:italic;
+}
+
+#m_sentence
+{
+font-size:18px;
+font-style:oblique;
+font-stretch:wider;
+padding:2px 3px 2px 3px;
+
+}  
+
+#final_section{
+border-bottom:2px inset black;
+border-top:3px inset black;
+padding:0px 0px 10px 0px;
+}
+
+#m_contact{
+border-top:2px double black;
+padding:2px 3px 2px 3px;
+}
